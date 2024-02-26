@@ -1,36 +1,17 @@
-// components/LoginPage.tsx
-
 import React, { useState } from 'react';
 import styles from "../components/index.module.css"
+import Navbar from '../pages/NavBar';
+import Login from "../pages/LoginPage";
+import MainSection from "../pages/MainSection";
+// import { Link } from 'react-router-dom';
 
-const LoginPage: React.FC = () => {
-  const [username, setUsername] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-
-  const handleLogin = () => {
-    alert(`⚠️WARNING⚠️!!!!\nPLEASE DO NOT USER A REAL PASSWORD YET!!!!!!!\nwe have yet to secure our site yet :( \n\nUsername: ${username}, Password: ${password}`);
-  };
-
+const App: React.FC = () => {
   return (
-    <div className={styles.container}>
-      <h1>Odyssey</h1>
-      <form>
-        <label>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        </label>
-        <br />
-        <button type="button" onClick={handleLogin}>
-          Login
-        </button>
-      </form>
+    <div>
+      <Navbar />
+        <MainSection />
     </div>
   );
-};
+}; 
 
-export default LoginPage;
+export default App;
