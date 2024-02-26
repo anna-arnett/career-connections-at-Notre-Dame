@@ -1,0 +1,54 @@
+
+.maincontainer {
+    display: block;
+    align-items: flex-start;
+    height: 100vh;
+    padding-left: 100px;
+    padding-right: 100px;
+    grid-template-columns: 0.7fr 1fr 1fr;
+    grid-template-rows: 15fr 0.5fr 1fr;
+    box-sizing: border-box;
+
+}
+
+.courseHeading {
+    padding-top: 10px;
+    font-size: 30px;
+    padding-left: 7px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.CourseInformation {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    max-width: 800px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.CourseTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.CourseID {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.Rating,
+.Difficulty {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.ClassTimings {
+    font-size: 14px;
+    color: #555;
+}
