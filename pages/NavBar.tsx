@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             <li className={styles.navlinks}>
               <span
                 className={styles.navlinks}
-                onClick={() => redirectToCourses()}
+                // onClick={() => redirectToCourses()}
               >
                 Courses
               </span>
