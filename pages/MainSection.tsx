@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styles from "../components/MainSection.module.css";
 
+
 const MainSection: React.FC = () => {
     return (
       <>
