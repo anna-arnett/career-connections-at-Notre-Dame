@@ -10,10 +10,10 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="w-full h-[5vh] flex mx-4 items-center justify-center">
+      <div className="w-full flex mx-4 py-4 items-center justify-center">
 
         {/* this is the container */}
-        <div className="flex w-full max-w-5xl justify-between">
+        <div className="flex w-full max-w-5xl items-center justify-between">
 
           {/* this is the home button */}
           <Link href="/">
@@ -21,19 +21,17 @@ const Navbar: React.FC = () => {
           </Link>
 
           {/* this is the container for the right side of the menu buttons */}
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <Link href="/">
-              <p>
                 Courses
-              </p>
-              </Link>
+            </Link>
             
             {/* we will make a button component and use it for login button */}
-              <Link href="LoginPage">
-              <p>
+            <Link href="LoginPage">
+              <div className="flex items-center justify-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all duration-200 ease-out">
                 Login
-              </p>  
-              </Link>
+              </div>
+            </Link>
           </div>
 
           {/* <div className={styles.MenuIcon} onClick={toggleMenu}>
