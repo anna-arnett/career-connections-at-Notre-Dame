@@ -6,7 +6,7 @@ import MainSection from "../pages/MainSection";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="w-full px-8 min-h-[100vh] flex-col justify-center">
       <Navbar />
         <MainSection />
     </div>
