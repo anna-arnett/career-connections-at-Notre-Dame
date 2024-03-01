@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../components/navbar.module.css"
-import { Link } from "react-router-dom"; // doesn't work for some reason?? 
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const [menuClick, setMenuClick] = useState(false);
@@ -8,50 +8,41 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setMenuClick(!menuClick);
   const closeMenu = () => setMenuClick(false);
 
-  const redirectToHome = () => {
-    window.location.href = "/"; // Change the URL to the desired path
-  };
-
-  const redirectToCourses = () => {
-    window.location.href = "/courses"; // Change the URL to the desired path
-  };
-
-  const redirectToSignIn = () => {
-    window.location.href = "/LoginPage"; // Change the URL to the desired path
-  };
-
   return (
     <>
-      <div className={styles.navbar}>
-        <div className={styles.navbarcontainer}>
-          <span className={styles.navbarlogo} onClick={redirectToHome}>
+      <div className="w-full h-[5vh] flex mx-4 items-center justify-center">
+
+        {/* this is the container */}
+        <div className="flex w-full max-w-5xl justify-between">
+
+          {/* this is the home button */}
+          <Link href="/">
             Odyssey
-          </span>
-          <div className={styles.MenuIcon} onClick={toggleMenu}>
+          </Link>
+
+          {/* this is the container for the right side of the menu buttons */}
+          <div className="flex gap-4">
+            <Link href="/">
+              <p>
+                Courses
+              </p>
+              </Link>
+            
+            {/* we will make a button component and use it for login button */}
+              <Link href="LoginPage">
+              <p>
+                Login
+              </p>  
+              </Link>
+          </div>
+
+          {/* <div className={styles.MenuIcon} onClick={toggleMenu}>
             {menuClick ? (
               <span className="material-symbols-outlined">close</span>
             ) : (
               <span className="material-symbols-outlined">menu</span>
             )}
-          </div>
-          <ul className={menuClick ? styles.navmenuactive : styles.navmenu}>
-            <li className={styles.navlinks}>
-              <span
-                className={styles.navlinks}
-                // onClick={() => redirectToCourses()}
-              >
-                Courses
-              </span>
-            </li>
-            <li className={styles.navlinks}>
-              <span
-                className={styles.navlinks}
-                onClick={() => redirectToSignIn()}
-              >
-                Sign In
-              </span>
-            </li>
-          </ul>
+          </div> */}
         </div>
       </div>
     </>
