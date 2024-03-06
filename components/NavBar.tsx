@@ -1,12 +1,7 @@
 import React, { useState } from "react";
-import styles from "../components/navbar.module.css"
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  const [menuClick, setMenuClick] = useState(false);
-
-  const toggleMenu = () => setMenuClick(!menuClick);
-  const closeMenu = () => setMenuClick(false);
 
   return (
     <>
@@ -22,25 +17,33 @@ const Navbar: React.FC = () => {
 
           {/* this is the container for the right side of the menu buttons */}
           <div className="flex items-center gap-4">
-            <Link href="/">
-                Courses
+            <Link href="/Dashboard">
+              Dashboard
             </Link>
             
+            <Link href="/Planner">
+              Planner
+            </Link>
+
             {/* we will make a button component and use it for login button */}
-            <Link href="LoginPage">
+            <Link href="SignUp">
+              <div className="flex items-center justify-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all duration-200 ease-out">
+                SignUp
+              </div>
+            </Link>
+
+            <Link href="Login">
               <div className="flex items-center justify-center px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-all duration-200 ease-out">
                 Login
               </div>
             </Link>
-          </div>
 
-          {/* <div className={styles.MenuIcon} onClick={toggleMenu}>
-            {menuClick ? (
-              <span className="material-symbols-outlined">close</span>
-            ) : (
-              <span className="material-symbols-outlined">menu</span>
-            )}
-          </div> */}
+            <Link href="AboutUs">
+              <div className="">
+                About Us
+              </div>
+            </Link>
+          </div>
         </div>
       </div>
     </>
