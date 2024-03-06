@@ -1,21 +1,22 @@
-import React, {useState} from "react";
-import styles from "../components/MainSection.module.css";
+import React, { useState } from "react";
 
 const MainSection: React.FC = () => {
-    return (
-      <>
-        <div className={styles.maincontainer}>
-            <div className={styles.courseHeading}>Courses</div>
-                <div className={styles.CourseInformation}>
-                    <h3 className={styles.CourseTitle}>Data Structures</h3>
-                    <h3 className={styles.CourseID}>CSE 20312</h3>
-                    <h4 className={styles.Rating}>2/5</h4>
-                    <h4 className={styles.Difficulty}>Easy</h4>
-                    <p className={styles.professor}>Peter Bui</p>
-                </div>
+  return (
+    <>
+      <div className="w-full flex justify-center mx-4">
+        <div className="w-full mt-6 max-w-5xl">
+          <div className="text-4xl">Courses</div>
+          <div className="w-full flex-col border border-gray-300 p-4 mt-4 rounded-md hover:bg-gray-100 transition-all duration-200 ease-out hover:cursor-pointer active:cursor-pointer">
+            <h3 className="text-xl font-bold">Data Structures</h3>
+            <p className="">CSE 20312</p>
+            <p className="">Peter Bui</p>
+            <p className="">2/5</p>
+            <p className="">Easy</p>
+          </div>
         </div>
-      </>
-    );
-}
+      </div>
+    </>
+  );
+};
 
 export default MainSection;

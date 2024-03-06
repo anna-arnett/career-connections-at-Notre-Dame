@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styles from "../components/index.module.css"
 import Navbar from '../pages/NavBar';
 import Login from "../pages/LoginPage";
 import MainSection from "../pages/MainSection";
@@ -7,7 +6,7 @@ import MainSection from "../pages/MainSection";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="w-full px-8 min-h-[100vh] flex-col justify-center">
       <Navbar />
         <MainSection />
     </div>
